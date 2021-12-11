@@ -21,6 +21,7 @@ import {
 } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
+import { Button } from 'antd';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
@@ -32,6 +33,7 @@ import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 const key = 'home';
 
@@ -93,6 +95,7 @@ export function HomePage({
                 onChange={onChangeUsername}
               />
             </label>
+            <Button type="primary">Button</Button>
           </Form>
           <ReposList {...reposListProps} />
         </Section>
